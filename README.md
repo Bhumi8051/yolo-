@@ -65,11 +65,15 @@ jupyter notebook Self-DrivingCars.ipynb
 ```
 yolo/
 ├── Self-DrivingCars.ipynb          # Main Jupyter notebook
+├── generate_results.py             # Script to generate result images
 ├── Object detection/
 │   ├── images/                      # Training images (excluded from git)
 │   ├── labels_train.csv            # Training labels
 │   ├── labels_trainval.csv         # Train-validation labels
 │   └── labels_val.csv              # Validation labels
+├── results/                         # YOLO detection result images
+│   ├── 1478019956680248165_result.jpg  # Result: 1 car, 1 truck
+│   └── 1478020211690815798_result.jpg  # Result: 4 cars, 3 traffic lights
 ├── class_1_car.png                 # Example: Car class
 ├── class_2_truck.png               # Example: Truck class
 ├── class_3_person.png              # Example: Person class
@@ -144,6 +148,17 @@ Detection results include:
 - Bounding box coordinates
 - Class predictions
 - Confidence scores
+
+### Result Images
+
+Check out the `results/` folder for example detection outputs:
+- **1478019956680248165_result.jpg**: Detected 1 car (72% confidence) and 1 truck (31% confidence)
+- **1478020211690815798_result.jpg**: Detected 4 cars and 3 traffic lights with various confidence scores
+
+You can generate your own result images by running:
+```bash
+python3 generate_results.py
+```
 
 ## 🛠️ Technologies Used
 
